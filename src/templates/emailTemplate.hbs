@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Correo electrónico de Random Agencia</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+        .header {
+            height: 85px !important;
+        }
+        .logo {
+            width: 100%; 
+        }
+        .content {
+            padding: 20px;
+            font-size: 16px;
+            min-height: 220px;
+        }
+        .saludo {
+            font-weight: bold;
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+        .mensaje {
+            font-size: 18px;
+            line-height: 1.5;
+            padding: 0 15px;
+        }
+    
+        .footer {
+            width: 100%;
+            background-color: #F5ECE0;
+            text-align: center; 
+            padding: 35px 0;
+        }
+        .footer p {
+            margin-bottom: 5px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-size: 14px;
+        }
+        .footer a {
+            color: #333;
+            text-decoration: none;
+        }
+        .footer > div {
+            display: inline-block;
+            margin: 0 28px;
+            font-weight:600;
+            font-size: 16px;
+        }
+        .div-uno {
+            padding-left: 18px;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <img src="https://gcdnb.pbrd.co/images/1SEmZiZPT4A8.png?o=1" alt="Logo de Random Agencia" class="logo">
+    </div>
+    <div class="content">
+        <p class="saludo">Hola {{nombre}}!</p>
+        <p class="mensaje">Gracias por ponerte en contacto con Random Agencia. Nos emociona recibir tu mensaje. Uno de nuestros representantes se pondrá en contacto contigo en breve para atender tus consultas y necesidades. ¡Esperamos poder colaborar contigo pronto!</p>
+    </div>
+    
+  <div class="footer">
+      <div class="div-uno">
+        <a href="http://www.random-agencia.com.ar">www.random-agencia.com.ar</a>
+      </div>
+      <div>
+        Teléfono: +549 2245505890
+      </div>
+      <div>
+        Correo: random.agencia@gmail.com
+      </div>
+    </div>
+</body>
+</html>
