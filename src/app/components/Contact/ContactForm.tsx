@@ -32,6 +32,7 @@ export const ContactForm = ({ errorMessage }: Props) => {
             }, 10000);
         }
     }, [isSubmitSuccessful, errorMessage]);
+    
 
     return (
         <div className="bg-white rounded-tl-[90px] rounded-br-[90px] relative">
