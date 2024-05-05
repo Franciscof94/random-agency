@@ -1,5 +1,5 @@
 'use client'
-import React from 'react'
+import React, { useState } from 'react'
 import { Title } from '../Title'
 import { ContactForm } from './ContactForm'
 import { Element } from 'react-scroll'
@@ -16,19 +16,20 @@ interface IForm {
 }
 
 export const Contact = () => {
+    const [errorMessage, setErrorMessage] = useState('')
 
     const methods = useForm<IForm>({
         resolver: yupResolver(FormSchema),
-        mode: 'onChange'
+        mode: 'all'
     })
-    const { handleSubmit, reset, formState: { errors } } = methods
+    const { handleSubmit, reset } = methods
 
     const onSubmit = async (data: IForm) => {
         try {
             await EmailService.postNewEmail(data)
             reset()
         } catch (error) {
-            console.log(error)
+            setErrorMessage('Ha ocurrido un error inesperado, por favor vuelve a intentarlo.')
         }
     };
 
@@ -39,7 +40,7 @@ export const Contact = () => {
                 <Element name="contacto" className=''>
                     <Title className='text-3xl font-bold pb-12'>HABLEMOS</Title>
                     <p className='text-lg w-2/4 pr-6 pb-12'>Juntos podemos lograr algo grandioso. Cuéntanos qué necesita tu marca en este momento.</p>
-                    <ContactForm />
+                    <ContactForm errorMessage={errorMessage} />
                 </Element>
             </form>
         </FormProvider>
