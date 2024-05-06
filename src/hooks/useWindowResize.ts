@@ -1,12 +1,18 @@
 import { useState, useEffect } from 'react';
 
 function useWindowResize() {
+  const isClient = typeof window === 'object';
+
   const [windowSize, setWindowSize] = useState({
-    width: window.innerWidth,
-    height: window.innerHeight,
+    width: isClient ? window.innerWidth : undefined,
+    height: isClient ? window.innerHeight : undefined,
   });
 
   useEffect(() => {
+    if (!isClient) {
+      return;
+    }
+
     const handleResize = () => {
       setWindowSize({
         width: window.innerWidth,
@@ -19,7 +25,7 @@ function useWindowResize() {
     return () => {
       window.removeEventListener('resize', handleResize);
     };
-  }, []);
+  }, [isClient]);
 
   return windowSize;
 }

@@ -11,12 +11,18 @@ import SidebarContext from "@/context/SidebarContext";
 
 export default function Home() {
   const windowSize = useWindowResize();
-  const [isMobile, setIsMobile] = useState(windowSize.width < 768);
+  const [isMobile, setIsMobile] = useState(windowSize && windowSize.width ? windowSize.width < 768 : false);
   const [sidebarIsOpen, setSidebarIsOpen] = useState(false)
 
 
 
   useEffect(() => {
+    const isClient = typeof window === 'object';
+
+    if (!isClient) {
+      return;
+    }
+
     function handleResize() {
       setIsMobile(window.innerWidth < 768);
     }
