@@ -6,7 +6,6 @@ import { Card } from './Card'
 import LogoPinasco from '../../assets/PinascoLogo.svg'
 import LogoLogifer from '../../assets/LogiferLogo.svg'
 import LogoPickleball from '../../assets/PickleballLogo.svg'
-import { ResizeContext } from '@/app/page'
 
 
 export const OurJobs = () => {

@@ -1,7 +1,8 @@
-import { SidebarContext } from '@/app/page';
+
 import React, { useContext, useEffect, useRef } from 'react'
 import { Link } from 'react-scroll';
 import { IoClose } from "react-icons/io5";
+import SidebarContext from '@/context/SidebarContext';
 
 export const Sidebar = () => {
 

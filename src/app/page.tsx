@@ -1,13 +1,13 @@
 'use client'
-import { createContext, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { AboutUs, Contact, OurJobs, OurServices, TopSection } from "./components";
 import { Footer } from "./components/Footer/Footer";
 import useWindowResize from "@/hooks/useWindowResize";
 import { Sidebar } from "./components/Sidebar/Sidebar";
+import ResizeContext from "@/context/ResizeContext";
+import SidebarContext from "@/context/SidebarContext";
 
 
-export const ResizeContext = createContext({ isMobile: false });
-export const SidebarContext = createContext({ sidebarIsOpen: false, setSidebarIsOpen: (isOpen: boolean) => {} });
 
 export default function Home() {
   const windowSize = useWindowResize();

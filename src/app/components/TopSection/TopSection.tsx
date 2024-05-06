@@ -5,7 +5,7 @@ import { Navbar } from './Navbar'
 import Image from 'next/image'
 import { Presentation } from './Presentation'
 import { ButtonPresentation } from './ButtonPresentation'
-import { ResizeContext } from '@/app/page'
+import ResizeContext from '@/context/ResizeContext'
 
 export const TopSection = () => {
 

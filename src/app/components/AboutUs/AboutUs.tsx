@@ -3,7 +3,8 @@ import React, { useContext } from 'react'
 import { Title } from '../Title'
 import { Cards } from './Cards'
 import { Element } from 'react-scroll'
-import { ResizeContext } from '@/app/page'
+import ResizeContext from '@/context/ResizeContext'
+
 
 export const AboutUs = () => {
     let { isMobile } = useContext(ResizeContext);

@@ -1,7 +1,8 @@
 import React, { useContext } from 'react'
 import { IoLogoLinkedin } from "react-icons/io5";
 import { FaSquareInstagram } from "react-icons/fa6";
-import { ResizeContext } from '@/app/page';
+import ResizeContext from '@/context/ResizeContext';
+
 
 export const Footer = () => {
   let { isMobile } = useContext(ResizeContext);

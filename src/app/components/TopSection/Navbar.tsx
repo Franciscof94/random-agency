@@ -3,7 +3,8 @@ import Logo from '../../assets/Logo.svg'
 import { MenuItems } from './MenuItems'
 import { FaBarsStaggered } from "react-icons/fa6";
 import { useContext } from 'react';
-import { SidebarContext } from '@/app/page';
+import SidebarContext from '@/context/SidebarContext';
+
 
 
 interface Props {
