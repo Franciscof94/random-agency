@@ -19,7 +19,7 @@ const override: CSSProperties = {
 export const CustomButton = ({ children, className, onClick, type, isLoading, ...props }: ButtonProps) => {
     return (
         isLoading ? (
-            <div className="h-[44px] flex items-center justify-center bg-sky-blue">
+            <div className="mt-4 sm:mt-0 h-[44px] flex items-center justify-center bg-sky-blue">
                 <PuffLoader
                     color='#fff'
                     loading={isLoading}
