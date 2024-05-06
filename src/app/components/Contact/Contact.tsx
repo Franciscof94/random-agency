@@ -38,8 +38,8 @@ export const Contact = () => {
         <FormProvider {...methods}>
             <form onSubmit={handleSubmit(onSubmit)}>
                 <Element name="contacto" className=''>
-                    <Title className='text-3xl font-bold pb-12'>HABLEMOS</Title>
-                    <p className='text-lg w-2/4 pr-6 pb-12'>Juntos podemos lograr algo grandioso. Cuéntanos qué necesita tu marca en este momento.</p>
+                    <Title className='text-xl sm:text-2xl md:text-2xl lg:text-3xl font-bold pb-8 sm:pb-12 sm:pb-16'>HABLEMOS</Title>
+                    <p className='text-sm sm:text-lg  sm:w-2/4 pr-6 pb-12'>Juntos podemos lograr algo grandioso. Cuéntanos qué necesita tu marca en este momento.</p>
                     <ContactForm errorMessage={errorMessage} />
                 </Element>
             </form>

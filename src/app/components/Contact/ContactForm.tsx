@@ -46,9 +46,9 @@ export const ContactForm = ({ errorMessage }: Props) => {
                 />
             </div>
             <div >
-                <div className='flex flex-col items-center justify-center py-16'>
-                    <div className=' flex mx-auto gap-x-20'>
-                        <div className='py-6'>
+                <div className='flex flex-col items-center justify-center py-8 sm:py-16'>
+                    <div className='flex flex-col sm:flex-row mx-auto gap-x-20'>
+                        <div className='py-1 sm:py-6'>
                             <FormField label="Nombre y apellido">
                                 <CustomInput
                                     name='nameAndLastname'
@@ -76,7 +76,7 @@ export const ContactForm = ({ errorMessage }: Props) => {
                                 />
                             </FormField>
                         </div>
-                        <div className='flex flex-col justify-between py-6'>
+                        <div className='flex flex-col justify-between  sm:py-6'>
                             <FormField label="Mensaje">
                                 <textarea
                                     {...register('message')}
@@ -94,7 +94,7 @@ export const ContactForm = ({ errorMessage }: Props) => {
                             </FormField>
                             <CustomButton
                                 disabled={!isValid}
-                                className={`w-full ${isValid ? 'bg-sky-blue' : "bg-[#ACC7C8]"}`}
+                                className={`mt-4 sm:mt-0 w-full ${isValid ? 'bg-sky-blue' : "bg-[#ACC7C8]"}`}
                                 type="submit"
                                 isLoading={isSubmitting}
                             >
@@ -116,10 +116,9 @@ export const ContactForm = ({ errorMessage }: Props) => {
             <div>
                 <Image
                     src={ShapeThree}
-                    width={116}
-                    height={87}
+                   
                     alt="Shape"
-                    className='absolute bottom-[-59px] left-[-30px]'
+                    className='absolute bottom-[-59px] left-[-30px] shape-three-image'
                 />
             </div>
 

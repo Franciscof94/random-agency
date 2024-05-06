@@ -34,11 +34,6 @@ export const CustomInput = ({
     const { register, setValue, formState: { errors } } = useFormContext();
 
 
-
-
-
-
-
     return (
         <div className="flex flex-col">
             <input

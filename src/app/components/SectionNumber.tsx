@@ -7,6 +7,6 @@ interface Props {
 
 export const SectionNumbers = ({ children, className }: Props) => {
     return (
-        <div className={`text-4xl font-medium ${className}`}>{children}</div>
+        <div className={` font-medium ${className}`}>{children}</div>
     );
 };

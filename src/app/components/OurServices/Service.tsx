@@ -10,8 +10,6 @@ interface ServiceProps {
 }
 
 export const Service = ({ title, description, image, side }: ServiceProps) => {
-
-
     return (
         <div className='flex py-9'>
             {side === "left" && <Image
@@ -21,8 +19,8 @@ export const Service = ({ title, description, image, side }: ServiceProps) => {
                 alt={title}
             />}
             <div className=''>
-                <Title className='text-[22px] font-bold pl-16'>{title}</Title>
-                <p className='pl-16 pr-2 py-4'>
+                <Title className='text-base sm:text-[22px] font-bold pl-16'>{title}</Title>
+                <p className='text-sm sm:text-base pl-16 pr-2 py-4'>
                     {description}
                 </p>
             </div>

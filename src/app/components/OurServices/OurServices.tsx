@@ -9,8 +9,8 @@ import { Element } from 'react-scroll'
 
 export const OurServices = () => {
     return (
-        <Element name="servicios" className='pb-40'>
-            <Title className='text-3xl font-bold pb-16'>LO QUE HACEMOS</Title>
+        <Element name="servicios" className='pb-20 sm:pb-40'>
+            <Title className='text-xl sm:text-2xl md:text-2xl lg:text-3xl font-bold pb-12 sm:pb-16'>LO QUE HACEMOS</Title>
             <hr className="w-full bg-black-80 h-[3px]" />
             <Service
                 title="SITIO WEB"
