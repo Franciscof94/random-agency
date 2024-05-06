@@ -46,7 +46,7 @@ export const ContactForm = ({ errorMessage }: Props) => {
                 />
             </div>
             <div >
-                <div className='flex flex-col items-center justify-center py-8 sm:py-16'>
+                <div className='flex flex-col items-center justify-center pb-0 pt-8 sm:py-16'>
                     <div className='flex flex-col sm:flex-row mx-auto gap-x-20'>
                         <div className='py-1 sm:py-6'>
                             <FormField label="Nombre y apellido">
