@@ -103,12 +103,12 @@ export const ContactForm = ({ errorMessage }: Props) => {
                         </div>
                     </div>
                     {showSuccessMessage && (
-                        <small className='text-emerald-500 text-sm sm:text-base font-semibold'>
+                        <small className='text-center text-emerald-500 text-sm sm:text-base font-semibold'>
                             Gracias por comunicarte con nosotros, a la brevedad responderemos tu consulta.
                         </small>
                     )}
                     {showErrorMessage && (
-                        <small className='text-red-500 text-sm sm:text-base font-semibold'>{errorMessage}</small>
+                        <small className='text-center text-red-500 text-sm sm:text-base font-semibold'>{errorMessage}</small>
                     )}
                 </div>
             </div>
