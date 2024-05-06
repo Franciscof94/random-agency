@@ -1,15 +1,14 @@
 'use client'
-import React, { useContext } from 'react'
 import Design from '../../assets/Design.svg'
 import { Navbar } from './Navbar'
 import Image from 'next/image'
 import { Presentation } from './Presentation'
 import { ButtonPresentation } from './ButtonPresentation'
-import ResizeContext from '@/context/ResizeContext'
+import ResizeContext, { useResizeContext } from '@/context/ResizeContext'
 
 export const TopSection = () => {
 
-    let { isMobile } = useContext(ResizeContext);
+    const { isMobile } = useResizeContext();
 
     return (
         <div className='pb-20 sm:pb-36 md:pb-36 lg:pb-36 xl:pb-40'>

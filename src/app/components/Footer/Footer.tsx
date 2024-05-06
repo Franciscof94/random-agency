@@ -1,11 +1,10 @@
-import React, { useContext } from 'react'
 import { IoLogoLinkedin } from "react-icons/io5";
 import { FaSquareInstagram } from "react-icons/fa6";
-import ResizeContext from '@/context/ResizeContext';
+import ResizeContext, { useResizeContext } from '@/context/ResizeContext';
 
 
 export const Footer = () => {
-  let { isMobile } = useContext(ResizeContext);
+  const { isMobile } = useResizeContext();
   return (
     <footer className='pt-20 sm:pt-40'>
       <hr className="w-full bg-black-80 h-[3px]" />

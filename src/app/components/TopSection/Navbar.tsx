@@ -2,8 +2,7 @@ import Image from 'next/image'
 import Logo from '../../assets/Logo.svg'
 import { MenuItems } from './MenuItems'
 import { FaBarsStaggered } from "react-icons/fa6";
-import { useContext } from 'react';
-
+import { useSidebarContext } from '@/context/SidebarContext';
 
 
 interface Props {
@@ -11,7 +10,7 @@ interface Props {
 }
 
 export const Navbar = ({ isMobile }: Props) => {
-  const { setSidebarIsOpen } = useContext(SidebarContext);
+  const { sidebarIsOpen, setSidebarIsOpen } = useSidebarContext();
 
   return (
     <header className="flex items-center justify-between sm:justify-start">

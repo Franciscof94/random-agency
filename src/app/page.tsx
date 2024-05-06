@@ -1,43 +1,17 @@
 'use client'
-import { useEffect, useState } from "react";
 import { AboutUs, Contact, OurJobs, OurServices, TopSection } from "./components";
 import { Footer } from "./components/Footer/Footer";
-import useWindowResize from "@/hooks/useWindowResize";
 import { Sidebar } from "./components/Sidebar/Sidebar";
-import ResizeContext from "@/context/ResizeContext";
-import SidebarContext from "@/context/SidebarContext";
+import ResizeContext, { ResizeProvider, useResizeContext } from "@/context/ResizeContext";
+import { SidebarProvider } from "@/context/SidebarContext";
 
 
 
 export default function Home() {
-  const windowSize = useWindowResize();
-  const [isMobile, setIsMobile] = useState(windowSize && windowSize.width ? windowSize.width < 768 : false);
-  const [sidebarIsOpen, setSidebarIsOpen] = useState(false)
-
-
-
-  useEffect(() => {
-    const isClient = typeof window === 'object';
-
-    if (!isClient) {
-      return;
-    }
-
-    function handleResize() {
-      setIsMobile(window.innerWidth < 768);
-    }
-
-    window.addEventListener('resize', handleResize);
-
-    return () => {
-      window.removeEventListener('resize', handleResize);
-    };
-  }, []);
-
-
+  const { isMobile } = useResizeContext();
   return (
-    <ResizeContext.Provider value={{ isMobile }}>
-      <SidebarContext.Provider value={{ sidebarIsOpen, setSidebarIsOpen }}>
+    <SidebarProvider>
+      <ResizeProvider>
         <div className=" relative">
           <main className="flex min-h-screen flex-col xl:px-30 lg:px-30 md:px-20 sm:px-12 px-6">
             <TopSection />
@@ -49,7 +23,7 @@ export default function Home() {
           </main>
           {isMobile && <Sidebar />}
         </div>
-      </SidebarContext.Provider>
-    </ResizeContext.Provider>
+      </ResizeProvider>
+    </SidebarProvider>
   );
 }

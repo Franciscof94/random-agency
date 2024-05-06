@@ -2,12 +2,13 @@
 import React, { useContext, useEffect, useRef } from 'react'
 import { Link } from 'react-scroll';
 import { IoClose } from "react-icons/io5";
-import SidebarContext from '@/context/SidebarContext';
+import { useSidebarContext } from '@/context/SidebarContext';
+
 
 export const Sidebar = () => {
 
     const sidebarRef = useRef<any>(null);
-    const { sidebarIsOpen, setSidebarIsOpen } = useContext(SidebarContext);
+    const { sidebarIsOpen, setSidebarIsOpen } = useSidebarContext();
 
 
     useEffect(() => {
