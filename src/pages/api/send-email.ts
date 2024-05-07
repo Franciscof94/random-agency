@@ -55,7 +55,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     });
 
     const mailOptionsUser = {
-      from: '"Random Agencia" <' + process.env.FROM_EMAIL + '>',
+      from: "Random Agencia",
       to: email,
       subject: "Nuevo mensaje - RANDOM AGENCIA",
 
