@@ -1,4 +1,4 @@
-'use client'
+
 import Design from '../../assets/Design.svg'
 import { Navbar } from './Navbar'
 import Image from 'next/image'

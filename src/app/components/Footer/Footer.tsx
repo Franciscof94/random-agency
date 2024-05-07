@@ -17,7 +17,7 @@ export const Footer = () => {
         </div>
         <div className='flex items-center gap-x-4'>
           <div>
-            <a href="https://www.linkedin.com/company/random-agencia">
+            <a href="https://www.linkedin.com/company/random-agencia" target="_blank">
               <IoLogoLinkedin size={isMobile ? 30 : 45} color='bg-black-80' />
             </a>
           </div>

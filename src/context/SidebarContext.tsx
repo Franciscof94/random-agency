@@ -14,7 +14,6 @@ interface Props {
 export const SidebarProvider = ({ children }: Props) => {
   const [sidebarIsOpen, setSidebarIsOpen] = useState(false);
 
-  console.log(sidebarIsOpen)
 
   return (
     <SidebarContext.Provider value={{ sidebarIsOpen, setSidebarIsOpen }}>

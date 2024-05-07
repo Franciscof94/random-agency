@@ -9,6 +9,7 @@ import { SidebarProvider } from "@/context/SidebarContext";
 
 export default function Home() {
   const { isMobile } = useResizeContext();
+
   return (
     <SidebarProvider>
       <ResizeProvider>
@@ -21,7 +22,7 @@ export default function Home() {
             <Contact />
             <Footer />
           </main>
-          {isMobile && <Sidebar />}
+          <Sidebar />
         </div>
       </ResizeProvider>
     </SidebarProvider>
