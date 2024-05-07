@@ -10,7 +10,7 @@ export const Sidebar = () => {
     const sidebarRef = useRef<any>(null);
     const { sidebarIsOpen, setSidebarIsOpen } = useSidebarContext();
 
-
+    console.log(sidebarIsOpen)
     useEffect(() => {
         const handleBodyScroll = () => {
             document.body.style.overflow = sidebarIsOpen ? 'hidden' : 'auto';

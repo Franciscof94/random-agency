@@ -12,12 +12,14 @@ export const Footer = () => {
         <div className='flex flex-col '>
           <h5 className="font-semibold">Contacto</h5>
           <p className='text-sm sm:text-base pt-2'>R!Agencia</p>
-          <p className='text-sm sm:text-base py-2'>random.agencia@gmail.com</p>
+          <p className='text-sm sm:text-base py-2'>random.agencia.info@gmail.com</p>
           <p className='text-sm sm:text-base'>+549 2245505890</p>
         </div>
         <div className='flex items-center gap-x-4'>
           <div>
-            <IoLogoLinkedin size={isMobile ? 30 : 45} color='bg-black-80' />
+            <a href="https://www.linkedin.com/company/random-agencia">
+              <IoLogoLinkedin size={isMobile ? 30 : 45} color='bg-black-80' />
+            </a>
           </div>
           <div>
             <FaSquareInstagram size={isMobile ? 30 : 45} color='bg-black-80' />

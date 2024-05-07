@@ -12,6 +12,7 @@ interface Props {
 export const Navbar = ({ isMobile }: Props) => {
   const { sidebarIsOpen, setSidebarIsOpen } = useSidebarContext();
 
+
   return (
     <header className="flex items-center justify-between sm:justify-start">
       {isMobile && <div className='cursor-pointer' onClick={() => setSidebarIsOpen(true)}>
