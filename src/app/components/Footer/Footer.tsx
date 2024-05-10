@@ -12,8 +12,8 @@ export const Footer = () => {
         <div className='flex flex-col '>
           <h5 className="font-semibold">Contacto</h5>
           <p className='text-sm sm:text-base pt-2'>R!Agencia</p>
-          <p className='text-sm sm:text-base py-2'>random.agencia.info@gmail.com</p>
-          <p className='text-sm sm:text-base'>+549 2245505890</p>
+          <p className='text-sm sm:text-base py-2'>info@random-agencia.com</p>
+          {/* <p className='text-sm sm:text-base'></p> */}
         </div>
         <div className='flex items-center gap-x-4'>
           <div>
