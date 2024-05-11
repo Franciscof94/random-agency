@@ -4,10 +4,7 @@ import path from "path";
 import handlebars from "handlebars";
 import { NextApiRequest, NextApiResponse } from "next";
 
-export default async function handler(
-  req: NextApiRequest,
-  res: NextApiResponse
-) {
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method === "POST") {
     const { nameAndLastname, phone, email, message } = req.body;
 
@@ -25,6 +22,7 @@ export default async function handler(
 
     const compiledTemplate = handlebars.compile(emailTemplate);
 
+
     const templateForMePath = path.join(
       process.cwd(),
       "src",
@@ -39,16 +37,17 @@ export default async function handler(
       nombre: nameAndLastname,
       message: message,
       email: email,
-      phone: phone,
+      phone: phone
     });
+
+
 
     const htmlContent = compiledTemplate({
       nombre: nameAndLastname,
     });
 
     const transporter = nodemailer.createTransport({
-      host: process.env.EMAIL_HOST,
-      port: Number(process.env.EMAIL_PORT),
+      service: process.env.EMAIL_SERVICE,
       secure: true,
       auth: {
         user: process.env.EMAIL_USER,
@@ -57,7 +56,7 @@ export default async function handler(
     });
 
     const mailOptionsUser = {
-      from: '"Random Agencia" <' + process.env.FROM_EMAIL + ">",
+      from: '"Random Agencia" <' + process.env.FROM_EMAIL + '>',
       to: email,
       subject: "Nuevo mensaje - RANDOM AGENCIA",
 
@@ -76,6 +75,7 @@ export default async function handler(
         "Content-Type": "text/html; charset=UTF-8",
       },
     };
+
 
     transporter.sendMail(mailOptionsUser, function (error, info) {
       if (error) {
