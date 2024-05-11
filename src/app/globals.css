@@ -51,7 +51,7 @@ body {
 
 @media (min-width: 1440px) {
   .image-container img {
-    width: 245px; 
+    width: 255px; 
     height: auto; 
   }
 }
@@ -86,7 +86,7 @@ body {
 
 
 @media (min-width: 1440px) {
-  .image-container img {
+  .logo-image-container img {
     width: 62px; 
     height: auto; 
   }
