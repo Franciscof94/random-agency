@@ -5,7 +5,7 @@ import "./globals.css";
 const montserrat = Montserrat({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Random Agencia | Innovación Personalizada en Diseño y Desarrollo de Aplicaciones",
+  title: "Random Agencia | Diseño y Desarrollo de Aplicaciones",
   description: "Nos especializamos en el diseño y desarrollo de apps a medida empleando las ultimas tecnologias y tendencias del mercado.",
   icons: [
     {
